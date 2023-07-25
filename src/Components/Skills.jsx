@@ -1,16 +1,11 @@
 import React, { useState } from 'react'
 import "../Style/skills.css"
-import Javascript from "../img/javaScript.png"
 import Html from "../img/html5.png"
 import Css from "../img/css.png"
 import react from "../img/react.png"
 const Skills = ({ refernce, state }) => {
   const [CurrentIndex, setCurrentIndex] = useState(false)
   const datos_skill = [
-    {
-      name: 'Javascript',
-      imagen: Javascript
-    },
     {
       name: 'HTML',
       imagen: Html
