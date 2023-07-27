@@ -86,20 +86,20 @@
     width: 3rem;
     height: 3rem;
     display: none;
-    margin-right: 1rem;
+    margin-right: 1em;
     transition: all .3s ease-in-out;
 }
 
 .Sub_menu>div {
     background-color: black;
     height: 2px;
-    width: 100%;
+    width: 75%;
     transition: all .5s;
     transform-origin: left;
 }
 
 .Sub_menu.on div:nth-child(1) {
-    transform: rotate(45deg)translateX(10%);
+    transform: rotate(45deg) translateX(20%);
 }
 
 .Sub_menu.on div:nth-child(2) {
@@ -107,14 +107,24 @@
 }
 
 .Sub_menu.on div:nth-child(3) {
-    transform: rotate(-45deg)translateX(10%);
+    transform: rotate(-45deg) translateX(20%);
 }
 
 .close {
     display: none;
 }
 
-@media (800px>=width) {
+@media (hover:hover) {
+    .vincu:hover {
+        color: black
+    }
+
+    .vincu:hover:before {
+        width: 100%;
+    }
+}
+
+@media (width<=800px) {
     .close.on {
         display: flex;
         width: 55%;
@@ -153,7 +163,7 @@
         align-items: center;
         border: 0;
         border-radius: 2rem;
-        gap: .65rem;
+        gap: 10px;
         padding: .6rem;
         z-index: 81;
     }
@@ -168,22 +178,23 @@
 
     .Sub_menu.on {
         background-color: red;
-        color: white;
         padding-left: .8rem;
     }
 
     .Sub_menu.off {
         background-color: white;
-        color: black;
     }
-}
-
-@media (hover:hover) {
-    .vincu:hover {
-        color: black
+    .Sub_menu.on>div {
+        background-color: white;
+        height: 3px;
+        width: 90%;
     }
 
-    .vincu:hover:before {
-        width: 100%;
+    @media (width<=450px) {
+        .Sub_menu {
+            gap: 5px;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
     }
 }

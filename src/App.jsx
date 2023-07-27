@@ -14,10 +14,10 @@ function App() {
   },)
   const [refernce2, state2] = useIntersection({
     threshold: 0.3,
-  },state3)
+  })
   const [refernce, state] = useIntersection({
     threshold: 0.2,
-  },state2)
+  })
   return (
     <main className="App">
       <Header

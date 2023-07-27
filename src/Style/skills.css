@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     gap: 35px;
-    margin-top: 150px;
+    margin-top: 180px;
     position: relative;
 }
 
@@ -109,23 +109,11 @@
         border-radius: 6px;
         box-shadow: 0 0 15px 0 rgba(51, 49, 49, 0.45);
         position: relative;
-        overflow-x: hidden;
     }
 
     .img_skill {
-        width: 124px;
+        width: 50%;
         height: 70px;
-    }
-
-    @media (width<=300px) {
-        .sub_container {
-            width: 80%;
-        }
-
-        .img_skill {
-            width: 115px;
-            height: 70px;
-        }
     }
 
     .Skills h2 {
@@ -200,5 +188,16 @@
 
     .here.off {
         background-color: gray;
+    }
+
+    @media (width<=300px) {
+        .sub_container {
+            width: 80%;
+            height: 120px;
+        }
+
+        .img_skill {
+            width: 40%;
+        }
     }
 }
