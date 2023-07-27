@@ -3,7 +3,7 @@ import "../Style/skills.css"
 import Html from "../img/html5.png"
 import Css from "../img/css.png"
 import react from "../img/react.png"
-import Javascript from "../img/javaScrip.png"
+import Javascript from "../img/javascrip.png"
 const Skills = ({ refernce, state }) => {
   const [CurrentIndex, setCurrentIndex] = useState(false)
   const datos_skill = [
