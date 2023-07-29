@@ -121,6 +121,7 @@
     padding: 4px;
     gap: 5px;
     color: #F2F2F2;
+    font-weight: 700;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
