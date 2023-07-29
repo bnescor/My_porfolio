@@ -9,7 +9,7 @@
     justify-content: center;
     margin-top: 180px;
     gap: 35px;
-    transition: all 2s ease-in-out;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
 .Porfolio.on {
@@ -58,7 +58,7 @@
     justify-content: flex-end;
     align-items: start;
     padding: 10px;
-    color: white;
+    color: #F2F2F2;
     gap: 5px;
 }
 
@@ -73,7 +73,7 @@
     width: 80px;
     height: auto;
     border-radius: 10px;
-    border: 2px solid white;
+    border: 2px solid #F2F2F2;
     text-align: center;
 }
 
@@ -87,7 +87,7 @@
 
 .Extencion .bx {
     font-size: 30px;
-    color: white;
+    color: #F2F2F2;
     border-radius: .5rem;
 }
 
@@ -121,21 +121,21 @@
 
 .menuf.on {
     background-color: red;
-    color: white;
+    color: #F2F2F2;
 }
 
 .menuf.off {
-    background-color: white;
-    color: black;
+    background-color: #F2F2F2;
+    color: #1f1e1e;
 }
 
 .bx.bx-x {
-    color: white;
+    color: #F2F2F2;
     font-size: 28px;
 }
 
 .bx.bx-menu {
-    color: black;
+    color: #1f1e1e;
     font-size: 28px;
 }
 
@@ -184,6 +184,7 @@
         width: 80%;
         transition: margin-bottom .4s ease-in-out;
     }
+
     .Work_1.on {
         margin-bottom: 80px;
     }
@@ -221,7 +222,7 @@
         justify-content: center;
         align-items: center;
         background-color: red;
-        color: white;
+        color: #F2F2F2;
         border-radius: 50%;
         margin-left: 60%;
     }
@@ -254,7 +255,7 @@
         width: 100%;
         height: auto;
         border-radius: 3px;
-        border: 1px solid white;
+        border: 1px solid #F2F2F2;
         padding: 2.5px;
     }
 
@@ -264,7 +265,7 @@
 
     .Extencion .bx {
         font-size: 23px;
-        color: white;
+        color: #F2F2F2;
         border-radius: .5rem;
     }
 
@@ -278,17 +279,19 @@
             flex-direction: column;
             gap: 12px;
         }
+
         .Hability-pag h3 {
             font-size: 16px;
         }
-    
+
         .Hability-group {
             gap: 5px;
             font-size: 14px;
         }
+
         .Extencion .bx {
             font-size: 20px;
         }
-        
+
     }
 }

@@ -1,9 +1,11 @@
+import { useContext } from "react"
 import About from "./Components/About"
 import Contac from "./Components/Contac"
 import Header from "./Components/Header"
 import Porfolio from "./Components/Porfolio"
 import Skills from "./Components/Skills"
 import useIntersection from "./Hook/useIntersection"
+import { Themecontext } from "./Context/Themecontext"
 
 function App() {
   const [refernce4, state4] = useIntersection({
@@ -18,28 +20,29 @@ function App() {
   const [refernce, state] = useIntersection({
     threshold: 0.2,
   })
+  const {theme} = useContext(Themecontext)
   return (
-    <main className="App">
-      <Header
-        state={state}
-        state2={state2}
-        state3={state3}
-        state4={state4}
-      />
-      <About
-        refernce={refernce}
-        state={state}
-      />
-      <Porfolio
-        refernce={refernce2}
-        state={state2} />
-      <Skills
-        refernce={refernce3}
-        state={state3} />
-      <Contac
-        refernce={refernce4}
-        state={state4} />
-    </main>
+      <main className={`App ${theme}`}>
+        <Header
+          state={state}
+          state2={state2}
+          state3={state3}
+          state4={state4}
+        />
+        <About
+          refernce={refernce}
+          state={state}
+        />
+        <Porfolio
+          refernce={refernce2}
+          state={state2} />
+        <Skills
+          refernce={refernce3}
+          state={state3} />
+        <Contac
+          refernce={refernce4}
+          state={state4} />
+      </main>
   )
 }
 

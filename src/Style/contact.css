@@ -13,11 +13,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color2);
-    color: white;
+    background-color: #30504d;
+    color: #F2F2F2;
     margin-top: 180px;
 }
-
+.Contac.dark{
+    background-color: var(--color3);
+    color: rgb(63, 62, 62);
+}
 footer {
     width: 100%;
     display: grid;

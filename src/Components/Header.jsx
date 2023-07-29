@@ -1,39 +1,64 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "../Style/header.css"
 import { Link } from 'react-scroll'
+import Select from 'react-select'
+import es from '../img/español.svg'
+import en from '../img/english.svg'
+import { Themecontext } from '../Context/Themecontext'
+import { Idiomacontext } from '../Context/Idiomacontext'
+const optiones = [
+  { label: <div className='conatiner-icono'> <img className='icono' src={es} alt="" /> es</div>, value: 'es' },
+  { label: <div className='conatiner-icono'> <img className='icono' src={en} alt="" /> en</div>, value: 'en' }
+]
 
 const Header = ({ state, state2, state3, state4 }) => {
+  const { theme, changeTheme } = useContext(Themecontext)
+  const { Lenguacont, changeLengua } = useContext(Idiomacontext)
   const [load, setLoad] = useState(false)
   const menuchange = () => setLoad(!load)
+  const change = ({ value }) => {
+    changeLengua(value)
+  }
   return (
-    <header className='Header-main'>
-
+    <header className={`Header-main ${theme}`}>
       <article className='Description'>
         <p>Brian Escorcia <br />
-          Developer Frontend</p>
+          {Lenguacont.header.logosubtitle} Frontend</p>
       </article>
-      <div className='Botonera'>
+      <article className='Botonera'>
         <ul className={load ? 'menu on' : 'menu off'}>
           <li>
-            <Link className={state ? 'vincu on' : 'vincu'} to='About' smooth={true} offset={-50} duration={700}>About</Link>
+            <Link className={state ? 'vincu on ' : 'vincu'} to='About' smooth={true} offset={-50} duration={700}>{Lenguacont.header.link[0]}</Link>
           </li>
           <li>
-            <Link className={(state2 && !state) ? 'vincu on' : 'vincu'} to='Porfolio' smooth={true} offset={-100} duration={700}>Porfolio</Link>
+            <Link className={(state2 && !state) ? 'vincu on ' : 'vincu'} to='Porfolio' smooth={true} offset={-100} duration={700}>{Lenguacont.header.link[1]}</Link>
           </li>
           <li>
-            <Link className={(state3 && !state2 && !state4 )? 'vincu on' : 'vincu'} to='Skills' smooth={true} offset={-330} duration={700}>Skills</Link>
+            <Link className={(state3 && !state2 && !state4) ? 'vincu on ' : 'vincu'} to='Skills' smooth={true} offset={-330} duration={700}>{Lenguacont.header.link[2]}</Link>
           </li>
           <li>
-            <Link className={state4 ? 'vincu on' : 'vincu'} to='Contac' smooth={true} offset={-50} duration={700}>Contac</Link>
+            <Link className={state4 ? 'vincu on ' : 'vincu'} to='Contac' smooth={true} offset={-50} duration={700}>{Lenguacont.header.link[3]}</Link>
           </li>
         </ul>
-        <div onClick={menuchange} className={load ? 'close on' : 'close'}></div>
+        <div onClick={menuchange} className={load ? 'close on' : 'close'}>
+        </div>
         <button onClick={menuchange} className={load ? 'Sub_menu on' : 'Sub_menu off'}>
           <div></div>
           <div></div>
           <div></div>
         </button>
-      </div>
+        <div className={load ? 'menu-option on' : 'menu-option off'}>
+          <button onClick={changeTheme} className={`mode ${theme}`}>
+            <i className='bx bxs-moon'></i>
+            <i class='bx bxs-sun' ></i>
+          </button>
+          <Select
+            defaultValue={optiones[0]}
+            options={optiones}
+            onChange={change}
+          />
+        </div>
+      </article>
     </header>
   )
 }

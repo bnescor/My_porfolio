@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "../Style/porfolio.css"
 import Clima from "../img/Clima.png"
 import Rick_Morti from "../img/Rick and Morty.png"
 import Rando from "../img/Card rando.png"
+import { Themecontext } from '../Context/Themecontext'
+import { Idiomacontext } from '../Context/Idiomacontext'
 
 const Porfolio = ({ refernce, state }) => {
   let My_datos = [{
@@ -40,14 +42,15 @@ const Porfolio = ({ refernce, state }) => {
     )
     setload(newLoad)
   }
+  const { Lenguacont } = useContext(Idiomacontext)
   return (
     <section ref={refernce} className={state ? 'Porfolio on' : 'Porfolio'}>
-      <h2>PORFOLIO</h2>
+      <h2>{Lenguacont.porfolio}</h2>
       <article className='Work'>
         {My_datos?.map((user, index) => (
           <article key={index} className={load[index] ? 'Work_1 on' : 'Work_1'}>
             <div className='zoom'>
-            <img className='img_work' src={user.imagen} alt="" />
+              <img className='img_work' src={user.imagen} alt="" />
             </div>
             <button onClick={() => {
               cambio(index)

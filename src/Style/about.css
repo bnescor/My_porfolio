@@ -21,7 +21,7 @@
     position: relative;
     color: rgb(236, 235, 213);
     z-index: 100;
-    transition: all 2s ease-in-out;
+    transition: transform 2s ease-in-out,opacity 2s ease-in-out;
 }
 
 .About.on {
@@ -99,7 +99,7 @@
     border-radius: 50%;
     font-size: 25px;
     transition: all .2s ease-in-out;
-    color: white;
+    color: #F2F2F2;
 }
 
 .Photo {
@@ -107,6 +107,7 @@
 }
 
 .download {
+    text-decoration: none;
     border: none;
     width: 150px;
     height: 35px;
@@ -119,7 +120,7 @@
     font-size: 19px;
     padding: 4px;
     gap: 5px;
-    color: white;
+    color: #F2F2F2;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
