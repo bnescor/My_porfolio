@@ -93,7 +93,7 @@
     color: rgb(187, 196, 196);
 }
 
-.vincu.on::before {
+.vincu.on:before {
     position: absolute;
     bottom: -2px;
     height: 3px;
@@ -102,7 +102,7 @@
     transition: width .35s linear;
 }
 
-.Header-main.light .vincu.on::before {
+.Header-main.light .vincu.on:before {
     background-color: #16beae;
 }
 
@@ -114,13 +114,14 @@
     color: rgb(255, 255, 255);
 }
 
-.vincu::before {
+.vincu:before {
     position: absolute;
     content: "";
     bottom: -2px;
     height: 3px;
     width: 0;
     transition: width .35s linear;
+    background-color: #16beae;
 }
 
 .Sub_menu {
@@ -175,7 +176,7 @@
     background-color: #343D5B;
 }
 
-.mode.dark::after {
+.mode.dark:after {
     transform: translateX(100%)
 }
 
@@ -183,7 +184,7 @@
     font-size: 18px;
 }
 
-.mode::after {
+.mode:after {
     content: "";
     background-color: #F2F2F2;
     width: 50%;
@@ -198,10 +199,9 @@
 
 @media (hover:hover) {
     .vincu:hover {
-        color: #1f1e1e
+        color: #1f1e1e;
     }
-
-    .vincu:hover:before {
+    .vincu:hover:before  {
         width: 100%;
     }
 }

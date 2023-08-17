@@ -3,7 +3,6 @@ import "../Style/porfolio.css"
 import Clima from "../img/Clima.png"
 import Rick_Morti from "../img/Rick and Morty.png"
 import Rando from "../img/Card rando.png"
-import { Themecontext } from '../Context/Themecontext'
 import { Idiomacontext } from '../Context/Idiomacontext'
 
 const Porfolio = ({ refernce, state }) => {
