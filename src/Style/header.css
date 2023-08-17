@@ -121,6 +121,9 @@
     height: 3px;
     width: 0;
     transition: width .35s linear;
+    background-color: var(--color1);
+}
+.Header-main.light .vincu:before {
     background-color: #16beae;
 }
 
@@ -198,6 +201,9 @@
 }
 
 @media (hover:hover) {
+    .Header-main.light .vincu:hover {
+        color: rgb(255, 255, 255);
+    }
     .vincu:hover {
         color: #1f1e1e;
     }
