@@ -26,7 +26,6 @@
   grid-template-columns: 40% 60%;
   justify-items: center;
   align-items: center;
-  font-weight: 100;
   z-index: 102;
 }
 
@@ -63,7 +62,8 @@
   text-align: justify;
   font-style: italic;
   line-height: 1.5;
-  font-weight: 200;
+  font-weight: 400;
+  animation: all .5s ease-in-out;
 }
 
 .Cursor {
@@ -88,7 +88,7 @@
   gap: 15px;
   text-align: center;
   font-size: 21px;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .perfil .bx.bxl-github {
@@ -118,7 +118,7 @@
   padding: 4px;
   gap: 5px;
   color: var(--Text_On);
-  font-weight: 700;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
