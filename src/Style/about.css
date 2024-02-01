@@ -63,6 +63,7 @@
   text-align: justify;
   font-style: italic;
   line-height: 1.5;
+  font-weight: 200;
 }
 
 .Cursor {
@@ -87,6 +88,7 @@
   gap: 15px;
   text-align: center;
   font-size: 21px;
+  font-weight: 300;
 }
 
 .perfil .bx.bxl-github {
