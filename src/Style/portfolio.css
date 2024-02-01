@@ -11,6 +11,12 @@
     gap: 35px;
     transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
+.Porfolio h2{
+    font-size: 22px;
+}
+.Porfolio h3{
+    font-size: 18px;
+}
 
 .Porfolio.on {
     opacity: 1;
@@ -173,7 +179,6 @@
     .Porfolio h2 {
         font-size: 20px;
     }
-
     .Work_1 {
         width: 380px;
     }
@@ -243,12 +248,12 @@
     }
 
     .Hability-pag h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .Hability-group {
         gap: 10px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .Hability {
@@ -281,12 +286,12 @@
         }
 
         .Hability-pag h3 {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .Hability-group {
             gap: 5px;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .Extencion .bx {

@@ -2,8 +2,8 @@ import React, { useContext, useState } from 'react'
 import "../Style/header.css"
 import { Link } from 'react-scroll'
 import Select from 'react-select'
-import es from '../img/español.svg'
-import en from '../img/english.svg'
+import es from '../img/Esp.svg'
+import en from '../img/Us.svg'
 import { Themecontext } from '../Context/Themecontext'
 import { Idiomacontext } from '../Context/Idiomacontext'
 const optiones = [
@@ -18,6 +18,36 @@ const Header = ({ state, state2, state3, state4 }) => {
   const menuchange = () => setLoad(!load)
   const change = ({ value }) => {
     changeLengua(value)
+  }
+  const Style_select = {
+    control: (styles) => {
+      return {
+        ...styles,
+        backgroundColor: theme === "dark" ? "#30504d" : "#669b94"
+      }
+    }, option: (styles, { isDisabled, isSelected, isFocused }) => {
+      return {
+        ...styles,
+        backgroundColor: isDisabled ? undefined
+          : theme === "dark" && isSelected ?
+            "#30504d" :
+            theme === "light" && isSelected ?
+              "#669b94" :
+              isFocused ?
+                "#dcebe8" :
+                undefined
+      }
+    }, singleValue: (styles) => {
+      return {
+        ...styles,
+        color: "#dcebe8"
+      }
+    }, input: (base) => {
+      return {
+        ...base,
+        color: "#dcebe8"
+      }
+    }
   }
   return (
     <header className={`Header-main ${theme}`}>
@@ -56,6 +86,7 @@ const Header = ({ state, state2, state3, state4 }) => {
             defaultValue={optiones[0]}
             options={optiones}
             onChange={change}
+            styles={Style_select}
           />
         </div>
       </article>

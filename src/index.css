@@ -9,11 +9,10 @@ body {
 }
 
 :root {
-    --color1: #127369;
-    --color2: #10403B;
-    --color3: #8AA6A3;
-    --color4: #4C5958;
-    --color5: #BFBFBF;
+    --Text_C:#b8d7d1;
+    ---Text_On_App:#2b4442;
+    --Dark:#2b4442;
+    --Light:#f4f9f8;
 }
 
 .App {
@@ -23,14 +22,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #F2F2F2;
+    background-color: var(--Light);
     font-family: 'Montserrat', sans-serif;
     overflow-y: hidden;
     padding-top: 50px;
-    color: #1f1e1e;
+    color: var(---Text_On_App);
 }
 
 .App.dark {
-    background-color: #1f1e1e;
-    color: #F2F2F2;
+    background-color: var(--Dark);
+    color: var(--Text_C);
 }

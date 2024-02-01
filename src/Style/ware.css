@@ -1,14 +1,7 @@
-:root {
-    --color1: #127369;
-    --color2: #10403B;
-    --color3: #8AA6A3;
-    --color4: #4C5958;
-    --color5: #BFBFBF;
-}
 
 .Main {
     width: 100%;
-    height: 120px;
+    height: 134px;
     position: relative;
 }
 

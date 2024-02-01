@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react'
-import "../Style/porfolio.css"
+import "../Style/portfolio.css"
 import Clima from "../img/Clima.png"
 import Rick_Morti from "../img/Rick and Morty.png"
-import Rando from "../img/Card rando.png"
+import Random from "../img/Card random.png"
 import { Idiomacontext } from '../Context/Idiomacontext'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const Porfolio = ({ refernce, state }) => {
+const Portfolio = ({ referent, state }) => {
   let My_datos = [{
     name: "Clima Web",
     imagen: Clima,
@@ -19,8 +20,8 @@ const Porfolio = ({ refernce, state }) => {
     reposi: "https://github.com/bnescor/RickandMorty.git"
   },
   {
-    name: "Card Rando",
-    imagen: Rando,
+    name: "Card Random",
+    imagen: Random,
     web: "https://randocard.netlify.app",
     reposi: "https://github.com/bnescor/Card-Rando.git"
   }
@@ -43,7 +44,7 @@ const Porfolio = ({ refernce, state }) => {
   }
   const { Lenguacont } = useContext(Idiomacontext)
   return (
-    <section ref={refernce} className={state ? 'Porfolio on' : 'Porfolio'}>
+    <section ref={referent} className={state ? 'Porfolio on' : 'Porfolio'}>
       <h2>{Lenguacont.porfolio}</h2>
       <article className='Work'>
         {My_datos?.map((user, index) => (
@@ -81,4 +82,4 @@ const Porfolio = ({ refernce, state }) => {
   )
 }
 
-export default Porfolio
+export default Portfolio

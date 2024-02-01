@@ -1,10 +1,3 @@
-:root {
-    --color1: #127369;
-    --color2: #10403B;
-    --color3: #8AA6A3;
-    --color4: #4C5958;
-    --color5: #BFBFBF;
-}
 
 .Skills {
     width: 100%;
@@ -13,11 +6,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 50px;
     margin-top: 180px;
     position: relative;
 }
-
+.Skills h2{
+    font-size: 22px;
+}
+.Skills h3{
+    font-size: 18px;
+}
 .Skills-main {
     width: 100%;
     height: auto;
@@ -39,8 +37,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    color: #1f1e1e;
-    background-color: #9BABB8;
+    color: #2b4442;
     transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
@@ -48,14 +45,15 @@
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);
+    gap: 15px;
 }
 
 .Element.on.dark {
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);
-    background-color: #27374D;
-    color: #F2F2F2;
+    color:var(--Text_C);
+    gap: 15px;
 }
 
 .Element:nth-of-type(1) {
@@ -80,9 +78,15 @@
 .front {
     display: none;
 }
+.front .bx:hover{
+    cursor: pointer;
+}
 
 .botton {
     display: none;
+}
+.botton div:hover{
+    cursor: pointer;
 }
 
 @media (450px<=width<=800px) {
@@ -94,10 +98,6 @@
     .img_skill {
         width: 80px;
         height: 75px;
-    }
-
-    .Skills h2 {
-        font-size: 20px;
     }
 
     .Skills-main h3 {
@@ -113,17 +113,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        border: 2px solid #1f1e1e;
+        border: 2px solid #30504d;
         border-radius: 6px;
-        box-shadow: 0 0 15px 0 rgba(51, 49, 49, 0.45);
         position: relative;
         overflow-x: hidden;
+        background-color: #dcebe8;
     }
 
     .sub_container.dark {
-        box-shadow: 0 0 15px 0 rgba(206, 201, 201, 0.45);
-        border: 2px solid #F2F2F2;
-        background-color: #27374D;
+        border: 2px solid #669b94;
+        background-color: #3b6661;
     }
 
     .img_skill {
@@ -176,6 +175,7 @@
 
     .front .bx {
         font-size: 40px;
+        color: #8dbbb2;
     }
 
     .botton {
@@ -196,12 +196,13 @@
     }
 
     .here.on {
-        background-color: rgb(8, 131, 114);
-        box-shadow: 0 1px 18px 0 rgba(51, 49, 49, 0.603);
+        background-color: var(--Background);
+        box-shadow: 0 1px 5px 0 #30504d;
     }
 
     .botton.dark .here.on {
-        box-shadow: 0 1px 18px 0 rgba(206, 201, 201, 0.45);
+        background-color: #669b94;
+        box-shadow: 0 1px 5px 0 #4c807a;
     }
 
     .here.off {

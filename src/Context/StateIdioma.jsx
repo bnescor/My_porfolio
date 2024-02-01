@@ -5,33 +5,33 @@ const StateIdioma = ({ children }) => {
     const en = {
         header: {
             logosubtitle: 'Developer',
-            link: ['Profile', 'Porfolio', 'Skills', 'Contact']
+            link: ['Profile', 'Projects', 'Skills', 'Contact']
         },
         about: {
             textbutton: 'download cv'
         },
-        porfolio: 'PORFOLIO',
+        porfolio: 'PORTFOLIO',
         skills: 'SKILLS',
         contact: {
             title: 'CONTACT',
-            email: 'E-mail',
-            phone: 'Phone number'
+            email: <p>Copied <b>e-mail</b></p>,
+            phone: <p>Copied <b>Phone number</b></p>
         }
     }
     const es = {
         header: {
             logosubtitle: 'Desarrollador',
-            link: ['Perfil', 'Portafolio', 'Habilidades', 'Contacto']
+            link: ['Perfil', 'Proyectos', 'Habilidades', 'Contacto']
         },
         about: {
             textbutton: 'Descargar cv'
         },
-        porfolio: 'PORTAFOLIO',
+        porfolio: 'PROYECTO',
         skills: 'HABILIDADES',
         contact: {
             title: 'CONTACTO',
-            email: 'Correo electrónico',
-            phone: 'Número de teléfono'
+            email: <p><b>Correo</b>Copiado</p>,
+            phone: <p><b>teléfono</b>Copiado</p>
         }
     }
     const [Lenguacont, setLenguacont] = useState(es)

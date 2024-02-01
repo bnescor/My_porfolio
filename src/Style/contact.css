@@ -1,120 +1,86 @@
-:root {
-    --color1: #127369;
-    --color2: #10403B;
-    --color3: #8AA6A3;
-    --color4: #4C5958;
-    --color5: #BFBFBF;
-}
-
 .Contac {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #30504d;
-    color: #F2F2F2;
-    margin-top: 180px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Background);
+  color: var(--Text_Off);
+  margin-top: 180px;
+  gap: 1.2rem;
 }
-.Contac.dark{
-    background-color: var(--color3);
-    color: rgb(63, 62, 62);
+.Contac.dark {
+  background-color: var(--Background_dark);
+  color: var(---Text_On_dark);
 }
 footer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
 }
-
 .Phone {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
 }
 
 footer .bx {
-    font-size: 27px;
+  font-size: 32px;
 }
 
 .Email {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 15px;
-}
-
-footer h4,
-footer p {
-    font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
 }
 
 @media (480px<=width<=800px) {
-    .Contac h2 {
-        font-size: 20px;
-    }
+  .Contac h2 {
+    font-size: 20px;
+  }
 
-    footer h4,
-    footer p {
-        font-size: 18px;
-    }
-
-    footer .bx {
-        font-size: 24px;
-    }
-
-    @media (width<=420px) {
-        footer {
-            gap: 30px;
-        }
-    }
+  footer .bx {
+    font-size: 25px;
+  }
 }
 @media (360px<=width<480px) {
-    .Contac h2 {
-        font-size: 18px;
-    }
+  .Contac h2 {
+    font-size: 18px;
+  }
 
+  footer {
+    gap: 50px;
+  }
+
+  footer .bx {
+    font-size: 20px;
+  }
+  @media (width<=420px) {
     footer {
-        gap: 15px;
+      gap: 35px;
     }
-
-    footer .bx {
-        font-size: 18px;
-    }
-
-    footer h4,
-    footer p {
-        font-size: 14px;
-    }
+  }
 }
 
 @media (width<360px) {
-    .Contac h2 {
-        font-size: 18px;
-    }
+  .Contac h2 {
+    font-size: 18px;
+  }
 
-    footer {
-        gap: 12px;
-    }
+  footer {
+    gap: 25px;
+  }
 
-    footer .bx {
-        font-size: 16px;
-    }
-
-    footer h4,
-    footer p {
-        font-size: 12px;
-    }
+  footer .bx {
+    font-size: 18px;
+  }
 }
-
-@media (width<=310px) {
-    footer {
-        gap: 2px;
-    }
+.Contac .bx:hover {
+  cursor: pointer;
 }

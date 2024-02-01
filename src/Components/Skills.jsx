@@ -6,7 +6,7 @@ import react from "../img/react.png"
 import Javascript from "../img/javascrip.png"
 import { Idiomacontext } from '../Context/Idiomacontext'
 import { Themecontext } from '../Context/Themecontext'
-const Skills = ({ refernce, state }) => {
+const Skills = ({ referent, state }) => {
   const [CurrentIndex, setCurrentIndex] = useState(false)
   const datos_skill = [
     {
@@ -29,7 +29,7 @@ const Skills = ({ refernce, state }) => {
   const { Lenguacont } = useContext(Idiomacontext)
   const { theme } = useContext(Themecontext)
   return (
-    <main ref={refernce} className='Skills'>
+    <main ref={referent} className='Skills'>
       <h2>{Lenguacont.skills}</h2>
       <div className={`sub_container ${theme}`}>
         <section className={CurrentIndex ? 'Skills-main motionR' : 'Skills-main motionL'}>
@@ -48,8 +48,8 @@ const Skills = ({ refernce, state }) => {
         </div>
       </div>
       <div className={`botton ${theme}`}>
-        <div className={!CurrentIndex ? 'here on' : 'here off'}></div>
-        <div className={CurrentIndex ? 'here on' : 'here off'}></div>
+        <div onClick={() => CurrentIndex ? setCurrentIndex(!CurrentIndex):""} className={!CurrentIndex ? 'here on' : 'here off'}></div>
+        <div onClick={() => !CurrentIndex ? setCurrentIndex(!CurrentIndex):"" } className={CurrentIndex ? 'here on' : 'here off'}></div>
       </div>
     </main >
 
