@@ -10,12 +10,15 @@
     margin-top: 180px;
     gap: 35px;
     transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    font-weight: normal;
 }
 .Porfolio h2{
     font-size: 22px;
+    font-weight: bold;
 }
 .Porfolio h3{
     font-size: 18px;
+    font-weight: bold;
 }
 
 .Porfolio.on {
@@ -127,21 +130,21 @@
 
 .menuf.on {
     background-color: red;
-    color: #F2F2F2;
+    color:var(--Text_On);
 }
 
 .menuf.off {
-    background-color: #F2F2F2;
-    color: #1f1e1e;
+    background-color: var(--Text_On);
+    color: var(---Text_On_App);
 }
 
 .bx.bx-x {
-    color: #F2F2F2;
+    color:var(--Text_On);
     font-size: 28px;
 }
 
 .bx.bx-menu {
-    color: #1f1e1e;
+    color:var(---Text_On_App);
     font-size: 28px;
 }
 
@@ -265,7 +268,7 @@
     }
 
     .Extencion {
-        padding-right: 6px;
+        padding:2px 6px 0 2px;
     }
 
     .Extencion .bx {

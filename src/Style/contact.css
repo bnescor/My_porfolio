@@ -10,6 +10,10 @@
   margin-top: 180px;
   gap: 1.2rem;
 }
+.Contac h2 {
+  font-weight: bold;
+}
+
 .Contac.dark {
   background-color: var(--Background_dark);
   color: var(---Text_On_dark);

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "../Style/about.css";
 import useTypewriter from "../Hook/useTypewriter";
-import Perfil from "../img/Perfil-removebg.png";
+import Perfil from "../img/Perfil.png";
 import Ware from "./Ware";
 import { Idiomacontext } from "../Context/Idiomacontext";
 
