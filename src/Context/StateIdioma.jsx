@@ -26,12 +26,12 @@ const StateIdioma = ({ children }) => {
         about: {
             textbutton: 'Descargar cv'
         },
-        porfolio: 'PROYECTO',
+        porfolio: 'PROYECTOS',
         skills: 'HABILIDADES',
         contact: {
             title: 'CONTACTO',
-            email: <p><b>Correo</b>Copiado</p>,
-            phone: <p><b>teléfono</b>Copiado</p>
+            email: <p><b>Correo</b> Copiado</p>,
+            phone: <p><b>teléfono</b> Copiado</p>
         }
     }
     const [Lenguacont, setLenguacont] = useState(es)
