@@ -101,6 +101,7 @@
 .Photo {
   width: 55%;
   object-fit: contain;
+  border-radius: 15%;
 }
 
 .download {
