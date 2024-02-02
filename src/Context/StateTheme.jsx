@@ -3,14 +3,15 @@ import { Themecontext } from "./Themecontext";
 
 const StateTheme = ({ children }) => {
     const [theme, setTheme] = useState();
-    useEffect(() => {
-        if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+
+    window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
+        if (e.matches) {
             setTheme('dark');
         } else {
             setTheme('light');
         }
 
-    }, [])
+    });
 
     const changeTheme = () => {
         if (theme === "light") {
