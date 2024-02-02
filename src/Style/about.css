@@ -148,11 +148,6 @@
   }
 }
 @media (width<680px) {
-  @media (width>=850px), (orientation: landscape) {
-    .About {
-      height: 100vh;
-    }
-  }
   .About-main {
     grid-template-columns: 30% 70%;
     gap: 1.5rem;
@@ -219,10 +214,26 @@
       gap: 3px;
       font-size: 15px;
     }
-    @media (height>=900px) {
-      .About {
-        height: 70vh;
-      }
-    }
+  }
+}
+
+@media (500px>height), (orientation: landscape) {
+  .About {
+    height: 100vh;
+  }
+}
+@media (780px<=height<=950px) {
+  .About {
+    height: 65vh;
+  }
+}
+@media (650px<=height<780px) {
+  .About {
+    height: 85vh;
+  }
+}
+@media (600px<=height<650px) {
+  .About {
+    height: 100vh;
   }
 }
