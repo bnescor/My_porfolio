@@ -2,10 +2,10 @@
   transform: translateY(-250px);
   opacity: 0;
   width: 100%;
-  height: 80vh;
-  display: grid;
-  grid-template-rows: 70% 30%;
-  gap: 10px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background-image: url(../img/fondo.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,9 +22,10 @@
 
 .About-main {
   width: 100%;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  justify-items: center;
+  height: 380px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   z-index: 102;
 }
@@ -40,47 +41,27 @@
 }
 
 .Me {
-  height: 85%;
+  width: 60%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 18px;
   text-align: center;
-  gap: 0.8rem;
+  gap: 1.3rem;
   font-weight: normal;
 }
-.Container_para {
-  width: 100%;
-  height: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .Ab {
-  width: 100%;
-  padding: 25px;
+  width: 85%;
   height: auto;
   text-align: start;
-  font-style: italic;
   line-height: 1.5;
-  animation: all 0.5s ease-in-out;
-}
-
-.Cursor {
-  display: inline;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  animation: blink 1.2s infinite;
-}
-
-@keyframes blink {
-  50% {
-    color: transparent;
-  }
 }
 
 .perfil {
+  width: 40%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -90,6 +71,7 @@
   text-align: center;
   font-size: 21px;
   font-weight: bold;
+  padding: 20px;
 }
 
 .perfil .bx.bxl-github {
@@ -100,7 +82,8 @@
 }
 
 .Photo {
-  width: 40%;
+  width: 250px;
+  height: 250px;
   object-fit: contain;
   border-radius: 15%;
 }
@@ -138,21 +121,20 @@
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.55);
   }
 }
-@media (680px<=width<750px) {
+@media (680px<=width<720px) {
   .Ab {
-    width: 90%;
+    font-size: 17px;
   }
 
   .perfil {
     font-size: 20px;
+    padding: 5px;
+  }
+  .About-main {
+    height: 350px;
   }
 }
 @media (width<680px) {
-  .About-main {
-    grid-template-columns: 30% 70%;
-    gap: 1.5rem;
-  }
-
   .Me {
     font-size: 17px;
   }
@@ -164,11 +146,11 @@
 
   .perfil {
     font-size: 18px;
-    padding: 20px;
   }
 
   .Photo {
-    width: 75%;
+    width: 200px;
+    height: 200px;
   }
   .download {
     font-size: 17px;
@@ -180,26 +162,26 @@
 
   @media (width<=590px) {
     .Ab {
-      width: 85%;
+      width: 75%;
     }
     .About {
-      height: 100vh;
-      grid-template-rows: 80% 20%;
+      height: auto;
     }
     .About-main {
-      display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 0;
+      gap: 25px;
+      margin-top: 35px;
     }
     .Me {
       width: 100%;
       font-size: 15px;
     }
     .Photo {
-      width: 25%;
+      width: 135px;
+      height: 135px;
     }
     .perfil {
+      width: 100%;
       font-size: 16px;
       padding: 0;
     }
@@ -214,26 +196,5 @@
       gap: 3px;
       font-size: 15px;
     }
-  }
-}
-
-@media (500px>height), (orientation: landscape) {
-  .About {
-    height: 100vh;
-  }
-}
-@media (780px<=height<=950px) {
-  .About {
-    height: 65vh;
-  }
-}
-@media (650px<=height<780px) {
-  .About {
-    height: 85vh;
-  }
-}
-@media (600px<=height<650px) {
-  .About {
-    height: 100vh;
   }
 }

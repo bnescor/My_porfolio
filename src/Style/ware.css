@@ -1,8 +1,8 @@
 
 .Main {
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    height: 134px;
+    position: relative;
 }
 
 .Ware {

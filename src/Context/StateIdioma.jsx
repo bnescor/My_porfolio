@@ -8,6 +8,7 @@ const StateIdioma = ({ children }) => {
             link: ['Profile', 'Projects', 'Skills', 'Contact']
         },
         about: {
+            textInfo: 'Developer with a focus on creating intuitive and engaging digital experiences, combining aesthetics with functionality. I am always looking to learn and improve to offer efficient and high quality web solutions.',
             textbutton: 'download cv'
         },
         porfolio: 'PORTFOLIO',
@@ -24,6 +25,7 @@ const StateIdioma = ({ children }) => {
             link: ['Perfil', 'Proyectos', 'Habilidades', 'Contacto']
         },
         about: {
+            textInfo: 'Desarrollador con enfoque de crear experiencias digitales intuitivas y atractivas, combinando estética con funcionalidad. Siempre estoy buscando aprender y mejorar para ofrecer soluciones web eficientes y de alta calidad.',
             textbutton: 'Descargar cv'
         },
         porfolio: 'PROYECTOS',

@@ -1,13 +1,11 @@
 import React, { useContext } from "react";
 import "../Style/about.css";
-import useTypewriter from "../Hook/useTypewriter";
 import Perfil from "../img/Perfil.png";
 import Ware from "./Ware";
 import { Idiomacontext } from "../Context/Idiomacontext";
 
 const About = ({ referent, state }) => {
   const { Lenguacont } = useContext(Idiomacontext);
-  const ResultText = useTypewriter();
   return (
     <main ref={referent} className={state ? "About on" : "About"}>
       <section className="About-main">
@@ -19,12 +17,9 @@ const About = ({ referent, state }) => {
           </a>
         </div>
         <article className="Me">
-          <section className="Container_para">
             <p className="Ab">
-              {ResultText}
-              <p className="Cursor">I</p>
+              {Lenguacont.about.textInfo}
             </p>
-          </section>
           <a
             className="download"
             href="https://drive.google.com/file/d/1IAPY-dkMJuEm1YdXq1xg9XIDGVC1Njo8/view?usp=sharing"
