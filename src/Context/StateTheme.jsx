@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { Themecontext } from "./Themecontext";
 
 const StateTheme = ({ children }) => {
-    const [theme, setTheme] = useState(() => {
+    const [theme, setTheme] = useState();
+    useEffect(() => {
         if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-            return "dark";
+            setTheme('dark');
+        } else {
+            setTheme('light');
         }
-        return "light";
-    });
+
+    }, [window.matchMedia("(prefers-color-scheme:dark)").matches])
+
     const changeTheme = () => {
         if (theme === "light") {
             setTheme("dark");
