@@ -2,9 +2,9 @@
   transform: translateY(-250px);
   opacity: 0;
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   display: grid;
-  grid-template-rows: 85% 15%;
+  grid-template-rows: 70% 30%;
   gap: 10px;
   background-image: url(../img/fondo.png);
   background-size: cover;
@@ -40,10 +40,10 @@
 }
 
 .Me {
-  height: 60%;
-  display: grid;
-  grid-template-rows: 80% 20%;
-  justify-items: center;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-size: 18px;
   text-align: center;
@@ -52,15 +52,16 @@
 }
 .Container_para {
   width: 100%;
-  height: auto;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .Ab {
-  width: 80%;
+  width: 100%;
+  padding: 25px;
   height: auto;
-  text-align: justify;
+  text-align: start;
   font-style: italic;
   line-height: 1.5;
   animation: all 0.5s ease-in-out;
@@ -99,7 +100,7 @@
 }
 
 .Photo {
-  width: 55%;
+  width: 40%;
   object-fit: contain;
   border-radius: 15%;
 }
@@ -137,16 +138,7 @@
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.55);
   }
 }
-
-@media (670px<=width<800px) {
-  .Me {
-    width: 80%;
-    font-size: 16px;
-  }
-  .download {
-    font-size: 16px;
-  }
-
+@media (680px<=width<750px) {
   .Ab {
     width: 90%;
   }
@@ -154,55 +146,67 @@
   .perfil {
     font-size: 20px;
   }
-
-  .About-main {
-    gap: 1.5rem;
-  }
 }
-@media (width<670px) {
+@media (width<680px) {
+  @media (width>=850px), (orientation: landscape) {
+    .About {
+      height: 100vh;
+    }
+  }
   .About-main {
     grid-template-columns: 30% 70%;
+    gap: 1.5rem;
   }
 
   .Me {
-    width: 75%;
-    height: 85%;
     font-size: 17px;
   }
 
   .Ab {
-    width: 85%;
+    width: 80%;
+    padding: 0;
   }
 
   .perfil {
     font-size: 18px;
+    padding: 20px;
   }
 
   .Photo {
-    width: 45%;
+    width: 75%;
   }
   .download {
     font-size: 17px;
-    width: 140px;
+    width: 130px;
   }
   .perfil .bx.bxl-github {
     font-size: 21px;
   }
 
-  @media (width<=450px) {
+  @media (width<=590px) {
+    .Ab {
+      width: 85%;
+    }
+    .About {
+      height: 100vh;
+      grid-template-rows: 80% 20%;
+    }
     .About-main {
-      grid-template-columns: none;
-      grid-template-rows: auto auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
     }
     .Me {
       width: 100%;
       font-size: 15px;
     }
     .Photo {
-      width: 30%;
+      width: 25%;
     }
     .perfil {
       font-size: 16px;
+      padding: 0;
     }
     .perfil .bx.bxl-github {
       font-size: 20px;
@@ -215,20 +219,10 @@
       gap: 3px;
       font-size: 15px;
     }
-  }
-  @media (height<=400), (orientation: landscape) {
-    .Ab {
-      width: 100%;
-      font-size: 16px;
-    }
-    .Photo {
-      width: 50%;
-    }
-    .About-main {
-      grid-template-columns: 40% 60%;
-    }
-    .Perfil {
-      font-size: 17px;
+    @media (height>=900px) {
+      .About {
+        height: 70vh;
+      }
     }
   }
 }

@@ -46,7 +46,7 @@
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);
-    gap: 15px;
+    gap: 8px;
 }
 
 .Element.on.dark {
@@ -54,7 +54,7 @@
     transform: translateX(0);
     filter: blur(0);
     color:var(--Text_C);
-    gap: 15px;
+    gap: 8px;
 }
 
 .Element:nth-of-type(1) {

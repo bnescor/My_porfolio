@@ -7,8 +7,8 @@ import en from '../img/Us.svg'
 import { Themecontext } from '../Context/Themecontext'
 import { Idiomacontext } from '../Context/Idiomacontext'
 const optiones = [
-  { label: <div className='conatiner-icono'> <img className='icono' src={es} alt="" /> es</div>, value: 'es' },
-  { label: <div className='conatiner-icono'> <img className='icono' src={en} alt="" /> en</div>, value: 'en' }
+  { label: <div className='conatiner-icono'> <img className='icono' src={es} alt="" /></div>, value: 'es' },
+  { label: <div className='conatiner-icono'> <img className='icono' src={en} alt="" /></div>, value: 'en' }
 ]
 
 const Header = ({ state, state2, state3, state4 }) => {
@@ -37,16 +37,7 @@ const Header = ({ state, state2, state3, state4 }) => {
                 "#dcebe8" :
                 undefined
       }
-    }, singleValue: (styles) => {
-      return {
-        ...styles,
-        color: "#dcebe8"
-      }
-    }, input: (base) => {
-      return {
-        ...base,
-        color: "#dcebe8"
-      }
+
     }
   }
   return (
@@ -84,6 +75,7 @@ const Header = ({ state, state2, state3, state4 }) => {
           </button>
           <Select
             defaultValue={optiones[0]}
+            isSearchable={false}
             options={optiones}
             onChange={change}
             styles={Style_select}

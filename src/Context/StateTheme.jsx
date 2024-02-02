@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
-import { Themecontext } from './Themecontext'
+import React, { useState } from "react";
+import { Themecontext } from "./Themecontext";
 
 const StateTheme = ({ children }) => {
-    const [theme, setTheme] = useState('light')
-    const changeTheme = () => {
-        if (theme === 'light') {
-            setTheme('dark')
-        } else {
-            setTheme('light')
+    const [theme, setTheme] = useState(() => {
+        if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+            return "dark";
         }
-    }
-    const data = { theme, changeTheme }
-    return (<Themecontext.Provider value={data}>{children}</Themecontext.Provider>)
-}
+        return "light";
+    });
+    const changeTheme = () => {
+        if (theme === "light") {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    };
+    const data = { theme, changeTheme };
+    return <Themecontext.Provider value={data}>{children}</Themecontext.Provider>;
+};
 
-export default StateTheme
+export default StateTheme;
