@@ -71,7 +71,7 @@ const Header = ({ state, state2, state3, state4 }) => {
         <div className={load ? 'menu-option on' : 'menu-option off'}>
           <button onClick={changeTheme} className={`mode ${theme}`}>
             <i className='bx bxs-moon'></i>
-            <i class='bx bxs-sun' ></i>
+            <i className='bx bxs-sun' ></i>
           </button>
           <Select
             defaultValue={optiones[0]}

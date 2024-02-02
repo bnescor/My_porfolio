@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Themecontext } from "./Themecontext";
 
 const StateTheme = ({ children }) => {
@@ -10,7 +10,7 @@ const StateTheme = ({ children }) => {
             setTheme('light');
         }
 
-    }, [window.matchMedia("(prefers-color-scheme:dark)").matches])
+    }, [])
 
     const changeTheme = () => {
         if (theme === "light") {
