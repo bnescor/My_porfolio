@@ -37,7 +37,7 @@ const Skills = ({ referent, state }) => {
             <article key={index} className={state ? `Element on ${theme}`
               : 'Element'}>
               <h3>{user.name}</h3>
-              <img className='img_skill' src={user.imagen} alt="" />
+              <img loading="lazy" className='img_skill' src={user.imagen} alt="" />
             </article>
           ))
           }

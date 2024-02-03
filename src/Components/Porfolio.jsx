@@ -50,7 +50,7 @@ const Portfolio = ({ referent, state }) => {
         {My_datos?.map((user, index) => (
           <article key={index} className={load[index] ? 'Work_1 on' : 'Work_1'}>
             <div className='zoom'>
-              <img className='img_work' src={user.imagen} alt="" />
+              <img loading="lazy" className='img_work' src={user.imagen} alt="" />
             </div>
             <button onClick={() => {
               cambio(index)

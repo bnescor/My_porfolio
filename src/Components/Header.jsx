@@ -7,8 +7,8 @@ import en from '../img/Us.svg'
 import { Themecontext } from '../Context/Themecontext'
 import { Idiomacontext } from '../Context/Idiomacontext'
 const optiones = [
-  { label: <div className='conatiner-icono'> <img className='icono' src={es} alt="" /></div>, value: 'es' },
-  { label: <div className='conatiner-icono'> <img className='icono' src={en} alt="" /></div>, value: 'en' }
+  { label: <div className='conatiner-icono'> <img loading="lazy" className='icono' src={es} alt="" /></div>, value: 'es' },
+  { label: <div className='conatiner-icono'> <img loading="lazy" className='icono' src={en} alt="" /></div>, value: 'en' }
 ]
 
 const Header = ({ state, state2, state3, state4 }) => {
