@@ -1,35 +1,58 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --Text_C:#b8d7d1;
-    ---Text_On_App:#2b4442;
-    --Dark:#2b4442;
-    --Light:#f4f9f8;
+  --Text_light: #dcebe8;
+  --Text_dark: #000000;
+  --Dark: #201e43;
+  --Light: #f4f9f8;
+  --Barra_dark: #9dde8b;
+  --Barra_light: #1a5319;
+  --p:16px;
+  --h2:48px;
+  --h3:20px;
+  --titulo:30px;
+  --strong_dark:#FFBF00;
+  --strong_light:#FF9A00;
 }
-
+@media (width<=600px) {
+  :root{
+    --h2:36px;
+  }
+}
 .App {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Light);
-    font-family: 'Montserrat', sans-serif;
-    overflow-y: hidden;
-    padding-top: 50px;
-    color: var(---Text_On_App);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--Light);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  padding-top: 50px;
+  color: var(--Text_dark);
+  background-image: radial-gradient(
+    ellipse 80% 80% at 50% -20%,
+    #d9d8ff80,
+    #ffffffe6
+  );
+  gap: 80px;
 }
 
 .App.dark {
-    background-color: var(--Dark);
-    color: var(--Text_C);
+  background-color: var(--Dark);
+  color: var(--Text_light);
+  background-image: radial-gradient(
+    ellipse 80% 80% at 50% -20%,
+    #7877c64d,
+    #fff0
+  );
 }

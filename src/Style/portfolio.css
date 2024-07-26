@@ -1,305 +1,136 @@
 .Porfolio {
-    opacity: 0;
-    transform: translateX(-150px);
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 180px;
-    gap: 35px;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-    font-weight: normal;
+  opacity: 0;
+  transform: translateY(-150px);
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+  font-weight: normal;
 }
-.Porfolio h2{
-    font-size: 22px;
-    font-weight: bold;
-}
-.Porfolio h3{
-    font-size: 18px;
-    font-weight: bold;
-}
-
 .Porfolio.on {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateY(0);
 }
-
+.Porfolio h2 {
+  font-size: var(--titulo);
+}
 .Work {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.Work img {
+  width: 40%;
+  max-width: 430px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+.Description_work {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.Description_work h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.description_job {
+  font-size: var(--p);
+  opacity: 0.85;
+  text-align: start;
+  line-height: 24px;
+}
+.Tecnologia {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.Tecnologia p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: start;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: 1px solid var(--Text_light);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.Tecnologia p > img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+.React {
+  background-color: rgb(123, 201, 255, 0.25);
+}
+.Firebase {
+  background-color: rgb(253, 222, 85, 0.25);
+}
+.Deploy {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.Deploy a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px;
+  gap: 8px;
+  cursor: pointer;
+  font-size: var(--p);
+  border-radius: 10px;
+  border: 1px solid var(--Text_light);
+  transition: transform 0.3s ease-in-out;
+}
+.Deploy .bx {
+  font-size: 22px;
 }
 
-.Work_1 {
-    width: 500px;
-    height: auto;
-    display: flex;
+.Porfolio.light {
+  .Deploy a,
+  .Tecnologia p {
+    border-color: var(--Text_dark);
+  }
+}
+@media (hover: hover) {
+  .Deploy a:hover,
+  .Tecnologia p:hover {
+    transform: scale(1.05);
+  }
+}
+@media (800px<=width<=1000px) {
+  .Work img {
+    transform: scale(0.85);
+  }
+}
+@media (width<=800px) {
+  .Work {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.Conten {
-    width: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    grid-template-columns: auto auto;
-    overflow: hidden;
-    transition: all .5s ease-in-out;
-    background-color: rgba(115, 189, 202, 0.7);
-    gap: 5px;
-    z-index: 70;
-}
-
-.Hability-pag {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: start;
-    padding:0 0 10px 10px;
-    color: #F2F2F2;
-    gap: 5px;
-}
-
-.Hability-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-}
-
-.Hability {
-    width: 80px;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #F2F2F2;
-    text-align: center;
-}
-
-.Extencion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
-    padding: 10px;
-}
-
-.Extencion .bx {
-    font-size: 30px;
-    color: #F2F2F2;
-    border-radius: .5rem;
-}
-
-.zoom {
-    display: flex;
-    overflow: hidden;
-}
-
-.img_work {
-    width: 100%;
-    transition: all .2s ease-in-out;
-    object-fit: scale-down;
-}
-
-.menuf {
-    width: 1.7rem;
-    height: 1.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    border-radius: 50%;
-    gap: .45rem;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 71;
-    transition: all .4s ease-in-out;
-}
-
-.menuf.on {
-    background-color: red;
-    color:var(--Text_On);
-}
-
-.menuf.off {
-    background-color: var(--Text_On);
-    color: var(---Text_On_App);
-}
-
-.bx.bx-x {
-    color:var(--Text_On);
-    font-size: 28px;
-}
-
-.bx.bx-menu {
-    color:var(---Text_On_App);
-    font-size: 28px;
-}
-
-.Conten.on {
-    width: 100%;
-}
-
-.two {
-    display: none;
-}
-
-.three {
-    display: none;
-}
-
-.Work_1.on .img_work {
-    transform: scale(1.3);
-}
-
-@media (hover:hover) {
-    .Work_1:hover .Conten {
-        width: 100%;
+  }
+  .Description_work,.Work img  {
+    width: 95%;
+  }
+  @media (width<=600px) {
+    .Porfolio {
+      width: 90%;
     }
-
-    .Work_1:hover img {
-        transform: scale(1.3);
+    .Work img {
+      max-width: 550px;
     }
-
-    .menuf {
-        display: none;
-    }
-}
-
-@media (420px<=width<=570px) {
-    .Porfolio h2 {
-        font-size: 20px;
-    }
-    .Work_1 {
-        width: 380px;
-    }
-}
-
-@media (width<420px) {
-    .Work_1 {
-        width: 80%;
-        transition: margin-bottom .4s ease-in-out;
-    }
-
-    .Work_1.on {
-        margin-bottom: 80px;
-    }
-
-    .Porfolio h2 {
-        font-size: 18px;
-    }
-
-    .menuf {
-        width: 1rem;
-        height: 1rem;
-        top: auto;
-        bottom: 0;
-        left: 50%;
-    }
-
-    .bx.bx-x {
-        font-size: 18px;
-    }
-
-    .bx.bx-menu {
-        font-size: 18px;
-    }
-
-    .one {
-        display: none;
-    }
-
-    .two {
-        display: flex;
-    }
-
-    .three {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: red;
-        color: #F2F2F2;
-        border-radius: 50%;
-        margin-left: 60%;
-    }
-
-    .Conten {
-        width: 100%;
-        height: 0;
-        top: 100%;
-    }
-
-    .Conten.on {
-        height: 80px;
-    }
-
-    .Hability-pag {
-        padding:0 0 0 6px;
-        gap: 2.5px;
-    }
-
-    .Hability-pag h3 {
-        font-size: 16px;
-    }
-
-    .Hability-group {
-        gap: 10px;
-        font-size: 14px;
-    }
-
-    .Hability {
-        width: 100%;
-        height: auto;
-        border-radius: 3px;
-        border: 1px solid #F2F2F2;
-        padding: 2.5px;
-    }
-
-    .Extencion {
-        padding:2px 6px 0 2px;
-    }
-
-    .Extencion .bx {
-        font-size: 23px;
-        color: #F2F2F2;
-        border-radius: .5rem;
-    }
-
-    .menuf.on {
-        display: none;
-    }
-
-    @media (width<=300px) {
-        .Work {
-            flex-wrap: nowrap;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .Hability-pag h3 {
-            font-size: 14px;
-        }
-
-        .Hability-group {
-            gap: 5px;
-            font-size: 12px;
-        }
-
-        .Extencion .bx {
-            font-size: 20px;
-        }
-
-    }
+  }
 }

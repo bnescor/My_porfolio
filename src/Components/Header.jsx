@@ -11,7 +11,7 @@ const optiones = [
   { label: <div className='conatiner-icono'> <img loading="lazy" className='icono' src={en} alt="" /></div>, value: 'en' }
 ]
 
-const Header = ({ state, state2, state3, state4 }) => {
+const Header = ({ state, state2, state3 }) => {
   const { theme, changeTheme } = useContext(Themecontext)
   const { Lenguacont, changeLengua } = useContext(Idiomacontext)
   const [load, setLoad] = useState(false)
@@ -19,56 +19,27 @@ const Header = ({ state, state2, state3, state4 }) => {
   const change = ({ value }) => {
     changeLengua(value)
   }
-  const Style_select = {
-    control: (styles) => {
-      return {
-        ...styles,
-        backgroundColor: theme === "dark" ? "#30504d" : "#669b94"
-      }
-    }, option: (styles, { isDisabled, isSelected, isFocused }) => {
-      return {
-        ...styles,
-        backgroundColor: isDisabled ? undefined
-          : theme === "dark" && isSelected ?
-            "#30504d" :
-            theme === "light" && isSelected ?
-              "#669b94" :
-              isFocused ?
-                "#dcebe8" :
-                undefined
-      }
-
-    }
-  }
+  let condition = [state && !state3, state2 && !state3, state3]
   return (
     <header className={`Header-main ${theme}`}>
       <article className='Description'>
         <p>Brian Escorcia <br />
           {Lenguacont.header.logosubtitle} Frontend</p>
-      </article>
-      <article className='Botonera'>
-        <ul className={load ? 'menu on' : 'menu off'}>
-          <li>
-            <Link className={state ? 'vincu on ' : 'vincu'} to='About' smooth={true} offset={-50} duration={700}>{Lenguacont.header.link[0]}</Link>
-          </li>
-          <li>
-            <Link className={(state2 && !state) ? 'vincu on ' : 'vincu'} to='Porfolio' smooth={true} offset={-100} duration={700}>{Lenguacont.header.link[1]}</Link>
-          </li>
-          <li>
-            <Link className={(state3 && !state2 && !state4) ? 'vincu on ' : 'vincu'} to='Skills' smooth={true} offset={-330} duration={700}>{Lenguacont.header.link[2]}</Link>
-          </li>
-          <li>
-            <Link className={state4 ? 'vincu on ' : 'vincu'} to='Contac' smooth={true} offset={-50} duration={700}>{Lenguacont.header.link[3]}</Link>
-          </li>
-        </ul>
-        <div onClick={menuchange} className={load ? 'close on' : 'close'}>
-        </div>
         <button onClick={menuchange} className={load ? 'Sub_menu on' : 'Sub_menu off'}>
           <div></div>
           <div></div>
           <div></div>
         </button>
-        <div className={load ? 'menu-option on' : 'menu-option off'}>
+      </article>
+      <article className={load ? 'Botonera on' : 'Botonera off'}>
+        <ul className='menu'>
+          {Lenguacont.header.link.map((data, index) => (
+            <li key={data.name}>
+              <Link className={condition[index] ? 'vincu on ' : 'vincu'} to={data.to} smooth={true} offset={-50} duration={700}>{data.name}</Link>
+            </li>
+          ))}
+        </ul>
+        <div className='menu-option'>
           <button onClick={changeTheme} className={`mode ${theme}`}>
             <i className='bx bxs-moon'></i>
             <i className='bx bxs-sun' ></i>
@@ -78,10 +49,22 @@ const Header = ({ state, state2, state3, state4 }) => {
             isSearchable={false}
             options={optiones}
             onChange={change}
-            styles={Style_select}
+            theme={(theme) => ({
+              ...theme,
+              borderRadius: 0,
+              colors: {
+                ...theme.colors,
+                primary25: undefined,
+                primary50: undefined,
+                neutral0: '#201e43',
+                primary: '#6b728080',
+              },
+            })}
           />
         </div>
       </article>
+      <div onClick={menuchange} className={load ? 'close on' : 'close'}>
+      </div>
     </header>
   )
 }

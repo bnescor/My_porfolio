@@ -1,37 +1,32 @@
 import React, { useContext } from "react";
 import "../Style/about.css";
-import Perfil from "../img/Perfil.png";
-import Ware from "./Ware";
+import Perfil from "../img/foto-perfil.avif";
 import { Idiomacontext } from "../Context/Idiomacontext";
+import { Themecontext } from "../Context/Themecontext";
 
 const About = ({ referent, state }) => {
   const { Lenguacont } = useContext(Idiomacontext);
+  const { theme } = useContext(Themecontext)
   return (
-    <main ref={referent} className={state ? "About on" : "About"}>
-      <section className="About-main">
-        <div className="perfil">
-          <img loading="lazy" className="Photo" src={Perfil} alt="" />
-          <p>Brian Escorcia Gonzalez</p>
-          <a target="_blank" href="https://github.com/bnescor?tab=repositories">
-            <i className="bx bxl-github bx"></i>
-          </a>
+    <section ref={referent} className={state ? `About on ${theme}` : "About"}>
+      <article className="perfil">
+        <img loading="lazy" className="Photo" src={Perfil} alt="" />
+        <div>
+          <p>{Lenguacont.about.textbutton}</p>
         </div>
-        <article className="Me">
-          <p className="Ab">
-            {Lenguacont.about.textInfo}
-          </p>
-          <a
-            className="download"
-            href="https://drive.google.com/file/d/1IAPY-dkMJuEm1YdXq1xg9XIDGVC1Njo8/view?usp=sharing"
-            target="_blank"
-          >
-            {Lenguacont.about.textbutton}
-            <i className="bx bxs-download"></i>
-          </a>
-        </article>
-      </section>
-      <Ware />
-    </main>
+      </article>
+      <article className="Me">
+        <h2>{Lenguacont.about.textHello}</h2>
+        {Lenguacont.about.textInfo}
+      </article>
+      <article className="Contact">
+        <a target="_blank" href="https://linkedin.com/in/brian-escorcia-gonzalez"><i className='bx bxl-linkedin' />LinkedIn</a>
+        <a target="_blank" href="mailto:naziegonzalez5@gmail.com"><i class='bx bx-envelope' />{Lenguacont.about.tag_email}</a>
+        <a target="_blank" href="https://github.com/bnescor?tab=repositories">
+          <i className="bx bxl-github bx" /> {Lenguacont.about.tag_github}
+        </a>
+      </article>
+    </section>
   );
 };
 

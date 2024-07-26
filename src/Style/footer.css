@@ -1,0 +1,20 @@
+.footer {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px -8px 24px;
+  backdrop-filter: blur(4px);
+}
+.footer p {
+  width: auto;
+  padding: 15px 20px;
+}
+.footer p > a {
+  all: unset;
+  cursor: pointer;
+}
+@media (hover:hover) {
+  .footer p > a:hover {
+    text-decoration: underline;
+  }
+}
