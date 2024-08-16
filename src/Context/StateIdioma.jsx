@@ -17,8 +17,9 @@ const StateIdioma = ({ children }) => {
         about: {
             textInfo: <p>
                 Junior <b>frontend developer</b>, interested in creating <b>web applications</b>. Committed to <b>continuous learning</b>.
+                <b>FullStack Developer</b>, passionate about creating <b>web applications</b>. Committed to continuous learning and development in both <b>frontend and backend</b>, to provide comprehensive and high quality solutions.
             </p>,
-            textHello: "Hey, I'm Brian Escorcia",
+            textHello: "Hi, I'm Brian Escorcia",
             textbutton: 'Available for work',
             tag_email: 'Contact me',
             tag_github: 'Repository'
@@ -51,7 +52,7 @@ const StateIdioma = ({ children }) => {
                 }
             ]
         },
-        experience: { title: 'Work experience', job: 'Freelance', datejob: 'Currently...', descrijob: 'I have worked on projects ranging from small informative pages to more complex web applications, always ensuring a clean design and an intuitive user experience, integrating APIs and database management such as MySQL and MongoDB.' },
+        experience: { title: 'Work experience', job: 'Freelance', datejob: 'Currently...', descrijob: 'I have worked on projects ranging from small informative pages to more complex web applications, always ensuring a clean design and an intuitive user experience, integrating APIs and database management such as MySQL and Firabase.' },
         footer: <p>© 2024 All rights reserved. Design inspired by <a href="https://midudev.com" target="_blank">midudev</a></p>
     }
     const es = {
@@ -65,9 +66,9 @@ const StateIdioma = ({ children }) => {
         },
         about: {
             textInfo: <p>
-                <b>Desarrollador frontend</b> junior, interesado por la creación de <b>aplicaciones web</b>. Comprometido con el <b>aprendizaje continuo.</b>
+                <b>Desarrollador fullStack</b>, apasionado por la creación de <b>aplicaciones web</b>. Comprometido con el aprendizaje continuo y con el desarrollo tanto en <b>frontend como en backend,</b> para ofrecer soluciones integrales y de alta calidad.
             </p>,
-            textHello: "Hey, Soy Brian Escorcia",
+            textHello: "Hola, Soy Brian Escorcia",
             textbutton: 'Disponible para trabajar',
             tag_email: 'Contáctame',
             tag_github: 'Repositorio'
@@ -100,7 +101,7 @@ const StateIdioma = ({ children }) => {
                 }
             ]
         },
-        experience: { title: 'Experiencia laboral', job: 'Freelance', datejob: 'Actualmente...', descrijob: 'He trabajado en proyectos que van desde pequeñas páginas informativas hasta aplicaciones web más complejas, asegurando siempre un diseño limpio y una experiencia de usuario intuitiva. integrando APIs y manejo de bases de datos como MySQL y MongoDB.' },
+        experience: { title: 'Experiencia laboral', job: 'Freelance', datejob: 'Actualmente...', descrijob: 'He trabajado en proyectos que van desde pequeñas páginas informativas hasta aplicaciones web más complejas, asegurando siempre un diseño limpio y una experiencia de usuario intuitiva. integrando APIs y manejo de bases de datos como MySQL y Firabase.' },
         footer: <p>© 2024 Todos los derechos reservados. Diseño inspirado por <a href="https://midudev.com" target="_blank">midudev</a></p>
     }
     const [Lenguacont, setLenguacont] = useState(es)
